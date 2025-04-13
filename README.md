@@ -66,6 +66,7 @@ Make sure you have the following installed:
 	SUPABASE_PRIVATE_KEY= YOUR_SUPABASE_KEY
 	SUPABASE_URL= YOUR_SUPABASE_URL
 	PYTHON_API= http://localhost:8080
+	GOOGLE_GEMINI_API_KEY= YOUR_GEMINI_API_KEY
     ```
 
 4. Start the server in development mode:
