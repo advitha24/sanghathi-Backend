@@ -1,6 +1,6 @@
-# e-Mithru-Backend
+# Sanghathi-Backend
 
-This repository contains the backend code for the **E-Mithru** project, which manages student data and integrates with the frontend to provide a seamless experience for users. The backend is built using modern technologies, ensuring scalability, reliability, and ease of development.
+This repository contains the backend code for the **Sanghathi** project, which manages student data and integrates with the frontend to provide a seamless experience for users. The backend is built using modern technologies, ensuring scalability, reliability, and ease of development.
 
 ## Tech Stack
 
@@ -28,8 +28,8 @@ Make sure you have the following installed:
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/shovan-mondal/e-Mithru-Backend.git
-    cd e-Mithru-Backend
+    git clone https://github.com/shovan-mondal/Sanghathi-Backend.git
+    cd Sanghathi-Backend
     ```
 
 2. Install dependencies:
@@ -94,7 +94,7 @@ The server will run at `http://localhost:8000` by default.
 ## Folder Structure
 
 ```bash
-e-Mithru-Backend/
+Sanghathi-Backend/
 │
 ├── controllers/         # API route handlers
 ├── models/              # Mongoose schemas and models
