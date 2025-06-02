@@ -48,6 +48,10 @@ Make sure you have the following installed:
 
 3. Create a `.env` file in the root directory and configure the following variables:
 
+    ```bash
+    npm add dot env
+    ```
+
     ```env
 	NODE_ENV=development
 	PORT= ADD_YOUR_BACKEND_PORT
@@ -121,6 +125,43 @@ Sanghathi-Backend/
     ```
 
 4. Push your branch and create a pull request.
+
+## To deploy in Production 
+
+1. Install flyctl
+
+    For windows:
+    Run command in powershell:
+    ```bash
+    iwr https://fly.io/install.ps1 -useb | iex
+    ```
+
+    In macos:
+    ```bash
+    brew install flyctl
+    ```
+
+    In linux:
+    ```bash
+    curl -L https://fly.io/install.sh | sh
+    ```
+
+2. TO create fly.toml
+    To create a new fly.toml file
+    ```bash
+    flyctl launch
+    ```
+    or
+
+    To download from the existing fly.toml file
+    ```bash
+    flyctl config save -a <existing-app-name>
+    ```
+
+3. To deploy production 
+    ```bash
+    fly deploy
+    ```
 
 ## License
 
