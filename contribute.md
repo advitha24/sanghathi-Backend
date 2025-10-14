@@ -1,58 +1,85 @@
-
----
-
-# `CONTRIBUTE.md` for **Backend (sanghathi-Backend)**
-
-```markdown
 # Contributing to Sanghathi Backend
 
-We’re excited that you want to contribute to **Sanghathi Backend**  
-This document will guide you through environment setup, workflow, and submission process.
+Thank you for your interest in contributing to the **Sanghathi Backend** project!  
+This guide will help you set up your local environment, follow the contribution workflow, and submit your changes effectively.
 
 ---
 
-## Technology Stack
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
-- Swagger (for API docs)
+## Tech Stack
+
+The backend is built using the following technologies:
+
+- **Node.js** – JavaScript runtime for building scalable backend services.  
+- **Express.js** – Web framework for creating RESTful APIs.  
+- **MongoDB** – NoSQL database for flexible and fast data storage.  
+- **JWT Authentication** – For secure user authentication.  
+- **Swagger** – For auto-generated API documentation.
 
 ---
 
-## Getting Started
+## Setup Instructions
 
-### 1. Fork & Clone the Repository
+### 1. Fork and Clone the Repository
+
+First, fork the repository to your GitHub account and clone it locally:
+
 ```bash
-git clone https://github.com/YOUR-USERNAME/sanghathi-Backend.git
-cd sanghathi-Backend
-git remote add upstream https://github.com/Sanghathi/sanghathi-Backend.git
+git clone https://github.com/YOUR-USERNAME/Sanghathi-Backend.git
+cd Sanghathi-Backend
+Then, add the upstream remote to stay synced with the main project:
+git remote add upstream https://github.com/Sanghathi/Sanghathi-Backend.git
 ### 2. Install Dependencies
+Install all the required packages:
 npm install
 ### 3. Configure Environment Variables
-Create a .env file in the root with the following:
+Create a .env file in the root directory and add the necessary environment variables (refer to .env.example or the README for details).
+Example:
+PORT=5000
+MONGODB_URI=YOUR_MONGO_URI
+JWT_SECRET=YOUR_SECRET_KEY
 ### 4. Run the Development Server
+Start the local development server:
 npm run dev
-# API will be available at: http://localhost:5000
-### Branching & Workflow
-# 1.Create a new branch:
-git checkout -b feature/auth-api
-# 2.Make changes and commit:
+The backend will now run at:
+👉 http://localhost:5000
+Branching and Workflow
+To maintain clean collaboration, follow this standard Git workflow:
+### 1. Create a New Branch
+git checkout -b feature/your-feature-name
+Examples:
+feature/auth-api
+bugfix/login-error
+docs/update-readme
+### 2. Make Your Changes
+Implement your feature, bug fix, or documentation update.
+### 3. Commit Your Changes
+Follow meaningful commit messages:
 git commit -m "feat: add authentication API with JWT"
-# 3.Push your branch:
-git push origin feature/auth-api
-# 4.Open a Pull Request to main.
-### Before Submitting a PR
-Ensure server runs without errors.
-Test API endpoints with Postman/Insomnia.
-Update Swagger/OpenAPI documentation if APIs change.
-Add validation and error handling where needed.
-### Keeping Your Fork Updated
+### 4. Push Your Branch
+git push origin feature/your-feature-name
+### 5. Open a Pull Request (PR)
+Go to your GitHub repository.
+Click “Compare & pull request”.
+Submit your PR to the main branch.
+Before Submitting a Pull Request
+Please ensure that:
+The server runs without errors.
+All API endpoints are tested using Postman/Insomnia.
+Swagger or API documentation is updated if new routes are added.
+Proper input validation and error handling are implemented.
+No console logs or unnecessary debug statements remain.
+Keeping Your Fork Updated
+### Stay in sync with the main repository to avoid merge conflicts:
 git fetch upstream
 git pull --rebase upstream main
 git push --force origin feature/your-feature-name
-### Code Review Process
-Reviewers will check code style, error handling, and security.
-Database schema and API contracts must be consistent.
-Ensure commits are meaningful and follow best practices.
-### Thank you for contributing to Sanghathi Backend!
+Code Review Process
+Reviewers will check:
+Code readability and structure.
+Security and error handling practices.
+Consistency in API contracts and database schema.
+Commit message clarity and best practices.
+Once approved, your PR will be merged into the main branch. 
+Thank You 
+Your contributions make Sanghathi better for everyone.
+We appreciate your time and effort in helping improve the project!
