@@ -1,21 +1,41 @@
 import mongoose from "mongoose";
 
-const { Schema, model } = mongoose;
-
-const conversationSchema = new Schema({
-  recipients: [{ type: Schema.Types.ObjectId, ref: "Users" }],
+const conversationSchema = new mongoose.Schema({
   conversationId: {
     type: String,
   },
-  lastMessage: {
+  status: {
     type: String,
+    default: "active",
+  },
+  mentorId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  menteeId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  moocChecked: {
+    type: Boolean,
+    default: false,
+  },
+  projectChecked: {
+    type: Boolean,
+    default: false,
+  },
+  summary: {
+    type: String,
+    minlength: 30,
   },
   date: {
-    type: String,
+    type: Date,
     default: Date.now,
   },
 });
 
-const Conversation = model("conversations", conversationSchema);
-
+const Conversation = mongoose.model("Conversation", conversationSchema);
 export default Conversation;
+
+
+
