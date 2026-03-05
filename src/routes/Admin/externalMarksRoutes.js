@@ -3,6 +3,7 @@ import {
   submitExternalData,
   getExternalById,
   deleteAllExternal,
+  getMyExternalMarks,
 } from "../../controllers/Admin/ExternalMarksController.js";
 import { protect, restrictTo } from "../../controllers/authController.js";
 
@@ -10,6 +11,7 @@ const router = express.Router();
 
 // Apply protect middleware to all routes
 router.use(protect);
+router.get("/my-marks", getMyExternalMarks);
 
 // Routes for admin
 router

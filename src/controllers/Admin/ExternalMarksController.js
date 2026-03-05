@@ -99,3 +99,28 @@ export const deleteAllExternal = async (req, res) => {
 
   res.status(204).json({ message: "All External records deleted successfully" });
 }; 
+export const getMyExternalMarks = async (req, res) => {
+  try {
+    const userId = req.user.id;
+
+    const external = await External.findOne({ userId });
+
+    if (!external) {
+      return res.status(404).json({
+        status: "fail",
+        message: "No external marks found for this student",
+      });
+    }
+
+    res.status(200).json({
+      status: "success",
+      data: external,
+    });
+
+  } catch (error) {
+    logger.error("Error fetching student external marks:", error.message);
+    res.status(500).json({
+      message: "Internal server error",
+    });
+  }
+};
